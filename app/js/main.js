@@ -29,15 +29,24 @@ module.exports = exports['default'];
 },{}],2:[function(require,module,exports){
 // This is the 'bad guy'
 
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 var Life = function Life() {};
 
-exports["default"] = Life;
-module.exports = exports["default"];
+var rain = { opt: 'rain', pow: 20 };
+var time = { opt: 'running late', pow: 20 };
+var sleepy = { opt: 'sleepy', pow: 20 };
+var hungry = { opt: 'hungry', pow: 10 };
+var sad = { opt: 'lonely', pow: 30 };
+var night = { opt: 'darkness', pow: 20 };
+
+Life.prototype.meanOptions = [rain, time, sleepy, hungry, sad, night];
+
+exports['default'] = Life;
+module.exports = exports['default'];
 
 },{}],3:[function(require,module,exports){
 'use strict';
@@ -69,6 +78,10 @@ var _totoro = require('./totoro');
 var _totoro2 = _interopRequireDefault(_totoro);
 
 console.log('Hello, World');
+
+var mean = new _life2['default']();
+
+console.dir(mean);
 
 },{"./friend":1,"./life":2,"./totoro":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){
 // Totoro is main character of game

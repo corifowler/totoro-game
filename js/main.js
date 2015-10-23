@@ -7,3 +7,7 @@ import Totoro from './totoro';
 
 console.log('Hello, World');
 
+let mean = new Life();
+
+console.dir(mean);
+
