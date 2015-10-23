@@ -17,6 +17,13 @@ body {
 		height: 409px;
 	}
 
+	.make-friend{
+		margin-left: 36%;
+		margin-top: 10%;
+		padding: 5px;
+		border-radius: 3px;
+	}
+
 	.friend img {
 		width: 300px;
 		margin-top: 50px;
@@ -46,6 +53,7 @@ body {
 
 	.life {
 		@include span-columns(4);
+		@include omega();
 		border: 1px solid black;
 	}
 
@@ -54,8 +62,17 @@ body {
 		height: 300px;
 	}
 
+	.make-enemy {
+		margin-left: 28%;
+		margin-top: 10%;
+		padding: 5px;
+		border-radius: 3px;
+	}
+
 }
 
+
+// Creates heart for health of Totoro
 
 .health {
     position: relative;
@@ -98,5 +115,17 @@ body {
             transform-origin :100% 100%;
 }
 
+// Hidden Classes
 
+.friend-arena {
+	@include span-columns(4);
+	display: none;
+	border: 1px solid black;
+}
+
+.enemy-arena {
+	@include span-columns(4);
+	display: none;
+	border: 1px solid black;
+}
 

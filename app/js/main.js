@@ -138,10 +138,13 @@ makeFriend.on('click', function () {
   totoro.health = 0;
   console.log('a new friend has been created');
 
-  bestFriend.response();
+  // bestFriend.response();
 
   var totoroHealth = (0, _jquery2['default'])('.healthAmt');
   totoroHealth.text(totoro.health);
+
+  (0, _jquery2['default'])('.friend').fadeOut(1000);
+  (0, _jquery2['default'])('.friend-arena').fadeIn(3000);
 });
 
 var makeEnemy = (0, _jquery2['default'])('.make-enemy');
@@ -152,10 +155,13 @@ makeEnemy.on('click', function () {
   totoro.health = 100;
   console.log('you have chosen the dark path!');
 
-  enemy.response();
+  // enemy.response();
 
   var totoroHealth = (0, _jquery2['default'])('.healthAmt');
   totoroHealth.text(totoro.health);
+
+  (0, _jquery2['default'])('.life').fadeOut(1000);
+  (0, _jquery2['default'])('.enemy-arena').fadeIn(3000);
 });
 
 },{"./friend":1,"./life":2,"./totoro":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){

@@ -2047,6 +2047,11 @@ body {
     height: 409px; }
     .container .friend:last-child {
       margin-right: 0; }
+  .container .make-friend {
+    margin-left: 36%;
+    margin-top: 10%;
+    padding: 5px;
+    border-radius: 3px; }
   .container .friend img {
     width: 300px;
     margin-top: 50px;
@@ -2075,12 +2080,18 @@ body {
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
+    margin-right: 0;
     border: 1px solid black; }
     .container .life:last-child {
       margin-right: 0; }
   .container .life img {
     width: 345px;
     height: 300px; }
+  .container .make-enemy {
+    margin-left: 28%;
+    margin-top: 10%;
+    padding: 5px;
+    border-radius: 3px; }
 
 .health {
   position: relative;
@@ -2121,5 +2132,25 @@ body {
   -ms-transform-origin: 100% 100%;
   -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%; }
+
+.friend-arena {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  display: none;
+  border: 1px solid black; }
+  .friend-arena:last-child {
+    margin-right: 0; }
+
+.enemy-arena {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  display: none;
+  border: 1px solid black; }
+  .enemy-arena:last-child {
+    margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */
