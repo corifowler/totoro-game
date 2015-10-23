@@ -149,4 +149,13 @@ body {
 	@include span-columns(4);
 	display: none;
 	border: 1px solid black;
+
+}
+
+.ch {
+	border: 1px solid black;
+	padding: 10px;
+	font-size: 20px;
+	max-width: 90%;
+	margin: 10px auto;
 }

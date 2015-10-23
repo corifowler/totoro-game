@@ -25,7 +25,7 @@ var Friend = function Friend() {
 
   this.response = function () {
 
-    var template = ' \n        <button>' + Friend.prototype.battleOptions[0].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[1].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[2].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[3].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[4].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[5].opt + '</button>';
+    var template = ' \n        <button id="1">' + Friend.prototype.battleOptions[0].opt + '</button>\n        <button id="2">' + Friend.prototype.battleOptions[1].opt + '</button>\n        <button id="3">' + Friend.prototype.battleOptions[2].opt + '</button>\n        <button id="4">' + Friend.prototype.battleOptions[3].opt + '</button>\n        <button id="5">' + Friend.prototype.battleOptions[4].opt + '</button>\n        <button id="6">' + Friend.prototype.battleOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.friend-choices').append(template);
   };
@@ -34,9 +34,7 @@ var Friend = function Friend() {
 
     var numPick = _underscore2['default'].random(0, 5);
 
-    console.log(Friend.prototype.battleOptions[numPick]);
-
-    var template = '\n      <div>' + Friend.prototype.battleOptions[numPick].opt + '</div>';
+    var template = '\n      <div class="ch">' + Friend.prototype.battleOptions[numPick].opt + '</div>';
 
     (0, _jquery2['default'])('.computer-friend').append(template);
   };
@@ -83,7 +81,7 @@ var Life = function Life() {
 
   this.response = function () {
 
-    var template = ' \n        <button>' + Life.prototype.meanOptions[0].opt + '</button>\n        <button>' + Life.prototype.meanOptions[1].opt + '</button>\n        <button>' + Life.prototype.meanOptions[2].opt + '</button>\n        <button>' + Life.prototype.meanOptions[3].opt + '</button>\n        <button>' + Life.prototype.meanOptions[4].opt + '</button>\n        <button>' + Life.prototype.meanOptions[5].opt + '</button>';
+    var template = ' \n        <button id="1">' + Life.prototype.meanOptions[0].opt + '</button>\n        <button id="2">' + Life.prototype.meanOptions[1].opt + '</button>\n        <button id="3">' + Life.prototype.meanOptions[2].opt + '</button>\n        <button id="4">' + Life.prototype.meanOptions[3].opt + '</button>\n        <button id="5">' + Life.prototype.meanOptions[4].opt + '</button>\n        <button id="6">' + Life.prototype.meanOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.life-choices').append(template);
   };
@@ -92,9 +90,7 @@ var Life = function Life() {
 
     var numPick = _underscore2['default'].random(0, 5);
 
-    console.log(Life.prototype.meanOptions[numPick]);
-
-    var template = '\n      <div>' + Life.prototype.meanOptions[numPick].opt + '</div>';
+    var template = '\n      <div class="ch">' + Life.prototype.meanOptions[numPick].opt + '</div>';
 
     (0, _jquery2['default'])('.computer-enemy').append(template);
   };
