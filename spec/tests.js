@@ -25,7 +25,7 @@ var Friend = function Friend() {
 
   this.response = function () {
 
-    var template = ' \n      <select>\n        <option>' + Friend.prototype.battleOptions[0].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[1].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[2].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[3].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[4].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[5].opt + '</option>\n      </select>';
+    var template = ' \n        <button>' + Friend.prototype.battleOptions[0].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[1].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[2].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[3].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[4].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.friend-choices').append(template);
   };

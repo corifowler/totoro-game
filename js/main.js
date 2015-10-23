@@ -26,14 +26,17 @@ makeFriend.on('click', function() {
   totoro.health = 0;
   console.log('a new friend has been created');
 
-  // bestFriend.response();
 
   let totoroHealth = $('.healthAmt');
   totoroHealth.text(totoro.health);
 
   $('.friend').fadeOut(1000);
+  $('.life').fadeOut(1000);
   $('.friend-arena').fadeIn(3000);
+  $('.computer-enemy').fadeIn(3000);
 
+  bestFriend.response();
+  
 });
 
 let makeEnemy = $('.make-enemy');
@@ -50,7 +53,9 @@ makeEnemy.on('click', function() {
   totoroHealth.text(totoro.health);
 
   $('.life').fadeOut(1000);
+  $('.friend').fadeOut(1000);
   $('.enemy-arena').fadeIn(3000);
+  $('.computer-friend').fadeIn(3000);
 
 
 });

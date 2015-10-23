@@ -12,7 +12,6 @@ body {
 
 	.friend {
 		@include span-columns(4);
-		$border-box-sizing: true !default;
 		border: 1px solid black;
 		height: 409px;
 	}
@@ -32,7 +31,6 @@ body {
 
 	.totoro {
 		@include span-columns(4);
-		$border-box-sizing: true !default;
 		color: white;
 		border: 1px solid black;
 	}
@@ -121,11 +119,29 @@ body {
 	@include span-columns(4);
 	display: none;
 	border: 1px solid black;
+
+	.friend-choices button {
+		display: block;
+		margin: 10px;
+	}
 }
 
 .enemy-arena {
 	@include span-columns(4);
+	@include omega();
 	display: none;
 	border: 1px solid black;
 }
 
+.computer-enemy {
+	@include span-columns(4);
+	@include omega();
+	display: none;
+	border: 1px solid black;
+}
+
+.computer-friend {
+	@include span-columns(4);
+	display: none;
+	border: 1px solid black;
+}

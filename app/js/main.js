@@ -25,7 +25,7 @@ var Friend = function Friend() {
 
   this.response = function () {
 
-    var template = ' \n      <select>\n        <option>' + Friend.prototype.battleOptions[0].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[1].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[2].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[3].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[4].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[5].opt + '</option>\n      </select>';
+    var template = ' \n        <button>' + Friend.prototype.battleOptions[0].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[1].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[2].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[3].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[4].opt + '</button>\n        <button>' + Friend.prototype.battleOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.friend-choices').append(template);
   };
@@ -138,13 +138,15 @@ makeFriend.on('click', function () {
   totoro.health = 0;
   console.log('a new friend has been created');
 
-  // bestFriend.response();
-
   var totoroHealth = (0, _jquery2['default'])('.healthAmt');
   totoroHealth.text(totoro.health);
 
   (0, _jquery2['default'])('.friend').fadeOut(1000);
+  (0, _jquery2['default'])('.life').fadeOut(1000);
   (0, _jquery2['default'])('.friend-arena').fadeIn(3000);
+  (0, _jquery2['default'])('.computer-enemy').fadeIn(3000);
+
+  bestFriend.response();
 });
 
 var makeEnemy = (0, _jquery2['default'])('.make-enemy');
@@ -161,7 +163,9 @@ makeEnemy.on('click', function () {
   totoroHealth.text(totoro.health);
 
   (0, _jquery2['default'])('.life').fadeOut(1000);
+  (0, _jquery2['default'])('.friend').fadeOut(1000);
   (0, _jquery2['default'])('.enemy-arena').fadeIn(3000);
+  (0, _jquery2['default'])('.computer-friend').fadeIn(3000);
 });
 
 },{"./friend":1,"./life":2,"./totoro":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){

@@ -2142,15 +2142,40 @@ body {
   border: 1px solid black; }
   .friend-arena:last-child {
     margin-right: 0; }
+  .friend-arena .friend-choices button {
+    display: block;
+    margin: 10px; }
 
 .enemy-arena {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
+  margin-right: 0;
   display: none;
   border: 1px solid black; }
   .enemy-arena:last-child {
+    margin-right: 0; }
+
+.computer-enemy {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0;
+  display: none;
+  border: 1px solid black; }
+  .computer-enemy:last-child {
+    margin-right: 0; }
+
+.computer-friend {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  display: none;
+  border: 1px solid black; }
+  .computer-friend:last-child {
     margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */
