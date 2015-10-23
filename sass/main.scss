@@ -7,20 +7,26 @@ body {
 }
 
 .container{
-	@include span-columns(12);
+	@include outer-container;
 
 	.friend {
 		@include span-columns(4);
+		$border-box-sizing: true !default;
+		border: 1px solid black;
+		height: 409px;
 	}
 
 	.friend img {
 		width: 300px;
 		margin-top: 50px;
+		margin-left: 10px;
 	}
 
 	.totoro {
 		@include span-columns(4);
+		$border-box-sizing: true !default;
 		color: white;
+		border: 1px solid black;
 	}
 
 	.totoro .health .healthAmt {
@@ -34,15 +40,18 @@ body {
 
 	.totoro img {
 		width: 200px;
-
+		margin-left: 65px;
 	}
 
 	.life {
 		@include span-columns(4);
+		$border-box-sizing: true !default;
+		border: 1px solid black;
 	}
 
 	.life img {
-		height: 400px;
+		width: 345px;
+		height: 335px;
 	}
 
 }

@@ -2030,28 +2030,33 @@ body {
   background: #e2ebf3; }
 
 .container {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .container:last-child {
-    margin-right: 0; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
   .container .friend {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%; }
+    width: 31.76157%;
+    border: 1px solid black;
+    height: 409px; }
     .container .friend:last-child {
       margin-right: 0; }
   .container .friend img {
     width: 300px;
-    margin-top: 50px; }
+    margin-top: 50px;
+    margin-left: 10px; }
   .container .totoro {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
-    color: white; }
+    color: white;
+    border: 1px solid black; }
     .container .totoro:last-child {
       margin-right: 0; }
   .container .totoro .health .healthAmt {
@@ -2062,16 +2067,19 @@ body {
     font-size: 26px;
     font-weight: bold; }
   .container .totoro img {
-    width: 200px; }
+    width: 200px;
+    margin-left: 65px; }
   .container .life {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%; }
+    width: 31.76157%;
+    border: 1px solid black; }
     .container .life:last-child {
       margin-right: 0; }
   .container .life img {
-    height: 400px; }
+    width: 345px;
+    height: 335px; }
 
 .health {
   position: relative;
