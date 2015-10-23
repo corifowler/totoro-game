@@ -20,6 +20,18 @@ let Life = function() {
 
   };
 
+  this.computer = function() {
+
+    let numPick = _.random(0,5);
+
+    console.log(Life.prototype.meanOptions[numPick]);
+
+    let template = `
+      <div>${ Life.prototype.meanOptions[numPick].opt}</div>`;
+
+    $('.computer-enemy').append(template);
+
+  };
 
 };
 

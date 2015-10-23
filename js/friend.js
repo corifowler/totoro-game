@@ -20,8 +20,20 @@ let Friend = function() {
 
   };
 
-};
+  this.computer = function() {
 
+    let numPick = _.random(0,5);
+
+    console.log(Friend.prototype.battleOptions[numPick]);
+
+    let template = `
+      <div>${ Friend.prototype.battleOptions[numPick].opt}</div>`;
+
+    $('.computer-friend').append(template);
+
+  };
+
+};
 
 
 let leaf = {opt: 'leaf', pow: 20 };

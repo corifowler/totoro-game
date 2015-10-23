@@ -29,6 +29,17 @@ var Friend = function Friend() {
 
     (0, _jquery2['default'])('.friend-choices').append(template);
   };
+
+  this.computer = function () {
+
+    var numPick = _underscore2['default'].random(0, 5);
+
+    console.log(Friend.prototype.battleOptions[numPick]);
+
+    var template = '\n      <div>' + Friend.prototype.battleOptions[numPick].opt + '</div>';
+
+    (0, _jquery2['default'])('.computer-friend').append(template);
+  };
 };
 
 var leaf = { opt: 'leaf', pow: 20 };
@@ -75,6 +86,17 @@ var Life = function Life() {
     var template = ' \n        <button>' + Life.prototype.meanOptions[0].opt + '</button>\n        <button>' + Life.prototype.meanOptions[1].opt + '</button>\n        <button>' + Life.prototype.meanOptions[2].opt + '</button>\n        <button>' + Life.prototype.meanOptions[3].opt + '</button>\n        <button>' + Life.prototype.meanOptions[4].opt + '</button>\n        <button>' + Life.prototype.meanOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.life-choices').append(template);
+  };
+
+  this.computer = function () {
+
+    var numPick = _underscore2['default'].random(0, 5);
+
+    console.log(Life.prototype.meanOptions[numPick]);
+
+    var template = '\n      <div>' + Life.prototype.meanOptions[numPick].opt + '</div>';
+
+    (0, _jquery2['default'])('.computer-enemy').append(template);
   };
 };
 
@@ -135,6 +157,7 @@ var makeFriend = (0, _jquery2['default'])('.make-friend');
 makeFriend.on('click', function () {
 
   var bestFriend = new _friend2['default']();
+  var computer = new _life2['default']();
   totoro.health = 0;
   console.log('a new friend has been created');
 
@@ -147,6 +170,7 @@ makeFriend.on('click', function () {
   (0, _jquery2['default'])('.computer-enemy').fadeIn(3000);
 
   bestFriend.response();
+  computer.computer();
 });
 
 var makeEnemy = (0, _jquery2['default'])('.make-enemy');
@@ -154,6 +178,7 @@ var makeEnemy = (0, _jquery2['default'])('.make-enemy');
 makeEnemy.on('click', function () {
 
   var enemy = new _life2['default']();
+  var computer = new _friend2['default']();
   totoro.health = 100;
   console.log('you have chosen the dark path!');
 
@@ -166,6 +191,7 @@ makeEnemy.on('click', function () {
   (0, _jquery2['default'])('.computer-friend').fadeIn(3000);
 
   enemy.response();
+  computer.computer();
 });
 
 },{"./friend":1,"./life":2,"./totoro":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){

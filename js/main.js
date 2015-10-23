@@ -23,6 +23,7 @@ let makeFriend = $('.make-friend');
 makeFriend.on('click', function() {
 
   let bestFriend = new Friend();
+  let computer = new Life();
   totoro.health = 0;
   console.log('a new friend has been created');
 
@@ -35,6 +36,7 @@ makeFriend.on('click', function() {
   $('.computer-enemy').fadeIn(3000);
 
   bestFriend.response();
+  computer.computer();
 
 });
 
@@ -43,6 +45,7 @@ let makeEnemy = $('.make-enemy');
 makeEnemy.on('click', function() {
 
   let enemy = new Life();
+  let computer = new Friend();
   totoro.health = 100;
   console.log('you have chosen the dark path!');
 
@@ -55,6 +58,7 @@ makeEnemy.on('click', function() {
   $('.computer-friend').fadeIn(3000);
 
   enemy.response();
+  computer.computer();
 
 });
 

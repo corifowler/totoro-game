@@ -29,6 +29,17 @@ var Friend = function Friend() {
 
     (0, _jquery2['default'])('.friend-choices').append(template);
   };
+
+  this.computer = function () {
+
+    var numPick = _underscore2['default'].random(0, 5);
+
+    console.log(Friend.prototype.battleOptions[numPick]);
+
+    var template = '\n      <div>' + Friend.prototype.battleOptions[numPick].opt + '</div>';
+
+    (0, _jquery2['default'])('.computer-friend').append(template);
+  };
 };
 
 var leaf = { opt: 'leaf', pow: 20 };
@@ -75,6 +86,17 @@ var Life = function Life() {
     var template = ' \n        <button>' + Life.prototype.meanOptions[0].opt + '</button>\n        <button>' + Life.prototype.meanOptions[1].opt + '</button>\n        <button>' + Life.prototype.meanOptions[2].opt + '</button>\n        <button>' + Life.prototype.meanOptions[3].opt + '</button>\n        <button>' + Life.prototype.meanOptions[4].opt + '</button>\n        <button>' + Life.prototype.meanOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.life-choices').append(template);
+  };
+
+  this.computer = function () {
+
+    var numPick = _underscore2['default'].random(0, 5);
+
+    console.log(Life.prototype.meanOptions[numPick]);
+
+    var template = '\n      <div>' + Life.prototype.meanOptions[numPick].opt + '</div>';
+
+    (0, _jquery2['default'])('.computer-enemy').append(template);
   };
 };
 
