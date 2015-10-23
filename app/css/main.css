@@ -2156,6 +2156,9 @@ body {
   border: 1px solid black; }
   .enemy-arena:last-child {
     margin-right: 0; }
+  .enemy-arena .life-choices button {
+    display: block;
+    margin: 10px; }
 
 .computer-enemy {
   float: left;

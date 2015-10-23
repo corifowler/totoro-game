@@ -72,7 +72,7 @@ var Life = function Life() {
 
   this.response = function () {
 
-    var template = ' \n      <select>\n        <option>' + Life.prototype.meanOptions[0].opt + '</option>\n        <option>' + Life.prototype.meanOptions[1].opt + '</option>\n        <option>' + Life.prototype.meanOptions[2].opt + '</option>\n        <option>' + Life.prototype.meanOptions[3].opt + '</option>\n        <option>' + Life.prototype.meanOptions[4].opt + '</option>\n        <option>' + Life.prototype.meanOptions[5].opt + '</option>\n      </select>';
+    var template = ' \n        <button>' + Life.prototype.meanOptions[0].opt + '</button>\n        <button>' + Life.prototype.meanOptions[1].opt + '</button>\n        <button>' + Life.prototype.meanOptions[2].opt + '</button>\n        <button>' + Life.prototype.meanOptions[3].opt + '</button>\n        <button>' + Life.prototype.meanOptions[4].opt + '</button>\n        <button>' + Life.prototype.meanOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.life-choices').append(template);
   };

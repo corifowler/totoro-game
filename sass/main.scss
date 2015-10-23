@@ -131,6 +131,11 @@ body {
 	@include omega();
 	display: none;
 	border: 1px solid black;
+
+	.life-choices button {
+		display: block;
+		margin: 10px;
+	}
 }
 
 .computer-enemy {

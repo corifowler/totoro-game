@@ -72,7 +72,7 @@ var Life = function Life() {
 
   this.response = function () {
 
-    var template = ' \n      <select>\n        <option>' + Life.prototype.meanOptions[0].opt + '</option>\n        <option>' + Life.prototype.meanOptions[1].opt + '</option>\n        <option>' + Life.prototype.meanOptions[2].opt + '</option>\n        <option>' + Life.prototype.meanOptions[3].opt + '</option>\n        <option>' + Life.prototype.meanOptions[4].opt + '</option>\n        <option>' + Life.prototype.meanOptions[5].opt + '</option>\n      </select>';
+    var template = ' \n        <button>' + Life.prototype.meanOptions[0].opt + '</button>\n        <button>' + Life.prototype.meanOptions[1].opt + '</button>\n        <button>' + Life.prototype.meanOptions[2].opt + '</button>\n        <button>' + Life.prototype.meanOptions[3].opt + '</button>\n        <button>' + Life.prototype.meanOptions[4].opt + '</button>\n        <button>' + Life.prototype.meanOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.life-choices').append(template);
   };
@@ -157,8 +157,6 @@ makeEnemy.on('click', function () {
   totoro.health = 100;
   console.log('you have chosen the dark path!');
 
-  // enemy.response();
-
   var totoroHealth = (0, _jquery2['default'])('.healthAmt');
   totoroHealth.text(totoro.health);
 
@@ -166,6 +164,8 @@ makeEnemy.on('click', function () {
   (0, _jquery2['default'])('.friend').fadeOut(1000);
   (0, _jquery2['default'])('.enemy-arena').fadeIn(3000);
   (0, _jquery2['default'])('.computer-friend').fadeIn(3000);
+
+  enemy.response();
 });
 
 },{"./friend":1,"./life":2,"./totoro":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){

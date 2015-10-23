@@ -26,7 +26,6 @@ makeFriend.on('click', function() {
   totoro.health = 0;
   console.log('a new friend has been created');
 
-
   let totoroHealth = $('.healthAmt');
   totoroHealth.text(totoro.health);
 
@@ -36,7 +35,7 @@ makeFriend.on('click', function() {
   $('.computer-enemy').fadeIn(3000);
 
   bestFriend.response();
-  
+
 });
 
 let makeEnemy = $('.make-enemy');
@@ -47,8 +46,6 @@ makeEnemy.on('click', function() {
   totoro.health = 100;
   console.log('you have chosen the dark path!');
 
-  // enemy.response();
-
   let totoroHealth = $('.healthAmt');
   totoroHealth.text(totoro.health);
 
@@ -57,6 +54,7 @@ makeEnemy.on('click', function() {
   $('.enemy-arena').fadeIn(3000);
   $('.computer-friend').fadeIn(3000);
 
+  enemy.response();
 
 });
 
