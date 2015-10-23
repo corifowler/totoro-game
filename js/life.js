@@ -1,6 +1,26 @@
+import $ from 'jquery';
+import _ from 'underscore';
+import moment from 'moment';
+
 // This is the 'bad guy'
 
 let Life = function() {
+
+  this.response = function() { 
+
+    let template = ` 
+      <select>
+        <option>${ Life.prototype.meanOptions[0].opt }</option>
+        <option>${ Life.prototype.meanOptions[1].opt }</option>
+        <option>${ Life.prototype.meanOptions[2].opt }</option>
+        <option>${ Life.prototype.meanOptions[3].opt }</option>
+        <option>${ Life.prototype.meanOptions[4].opt }</option>
+        <option>${ Life.prototype.meanOptions[5].opt }</option>
+      </select>`;
+
+    $('.life-choices').append(template);
+
+  };
 
 
 };

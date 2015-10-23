@@ -10,6 +10,41 @@ import Totoro from './totoro';
 let totoro = new Totoro();
 console.dir(totoro);
 
-let totoroHealth = $('.healthAmt');
-totoroHealth.text(totoro.health);
+let friend = new Friend();
+console.dir(friend);
+
+let enemy = new Life();
+console.dir(enemy);
+
+
+
+let makeFriend = $('.make-friend');
+
+makeFriend.on('click', function() {
+
+  let bestFriend = new Friend();
+  totoro.health = 0;
+  console.log('a new friend has been created');
+
+  bestFriend.response();
+
+  let totoroHealth = $('.healthAmt');
+  totoroHealth.text(totoro.health);
+
+});
+
+let makeEnemy = $('.make-enemy');
+
+makeEnemy.on('click', function() {
+
+  let enemy = new Life();
+  totoro.health = 100;
+  console.log('you have chosen the dark path!');
+
+  enemy.response();
+
+  let totoroHealth = $('.healthAmt');
+  totoroHealth.text(totoro.health);
+
+});
 

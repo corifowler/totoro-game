@@ -4,6 +4,7 @@
 
 body {
   background: #e2ebf3;
+  font-family: 'Amaranth', sans-serif;
 }
 
 .container{
@@ -45,13 +46,12 @@ body {
 
 	.life {
 		@include span-columns(4);
-		$border-box-sizing: true !default;
 		border: 1px solid black;
 	}
 
 	.life img {
 		width: 345px;
-		height: 335px;
+		height: 300px;
 	}
 
 }

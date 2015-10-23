@@ -1,13 +1,35 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-
-// This is the 'good guy'
-
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var Friend = function Friend() {};
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _underscore = require('underscore');
+
+var _underscore2 = _interopRequireDefault(_underscore);
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
+// This is the 'good guy'
+
+var Friend = function Friend() {
+
+  this.response = function () {
+
+    var template = ' \n      <select>\n        <option>' + Friend.prototype.battleOptions[0].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[1].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[2].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[3].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[4].opt + '</option>\n        <option>' + Friend.prototype.battleOptions[5].opt + '</option>\n      </select>';
+
+    (0, _jquery2['default'])('.friend-choices').append(template);
+  };
+};
 
 var leaf = { opt: 'leaf', pow: 20 };
 var cat = { opt: 'cat bus', pow: 20 };
@@ -18,18 +40,43 @@ var perch = { opt: 'find perch', pow: 20 };
 
 Friend.prototype.battleOptions = [leaf, cat, forest, food, friend, perch];
 
+console.dir(Friend.prototype.battleOptions);
+
 exports['default'] = Friend;
 module.exports = exports['default'];
 
-},{}],2:[function(require,module,exports){
-// This is the 'bad guy'
-
+},{"jquery":5,"moment":6,"underscore":7}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var Life = function Life() {};
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _underscore = require('underscore');
+
+var _underscore2 = _interopRequireDefault(_underscore);
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
+// This is the 'bad guy'
+
+var Life = function Life() {
+
+  this.response = function () {
+
+    var template = ' \n      <select>\n        <option>' + Life.prototype.meanOptions[0].opt + '</option>\n        <option>' + Life.prototype.meanOptions[1].opt + '</option>\n        <option>' + Life.prototype.meanOptions[2].opt + '</option>\n        <option>' + Life.prototype.meanOptions[3].opt + '</option>\n        <option>' + Life.prototype.meanOptions[4].opt + '</option>\n        <option>' + Life.prototype.meanOptions[5].opt + '</option>\n      </select>';
+
+    (0, _jquery2['default'])('.life-choices').append(template);
+  };
+};
 
 var rain = { opt: 'rain', pow: 20 };
 var time = { opt: 'running late', pow: 20 };
@@ -43,7 +90,7 @@ Life.prototype.meanOptions = [rain, time, sleepy, hungry, sad, night];
 exports['default'] = Life;
 module.exports = exports['default'];
 
-},{}],3:[function(require,module,exports){
+},{"jquery":5,"moment":6,"underscore":7}],3:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -77,8 +124,39 @@ var _totoro2 = _interopRequireDefault(_totoro);
 var totoro = new _totoro2['default']();
 console.dir(totoro);
 
-var totoroHealth = (0, _jquery2['default'])('.healthAmt');
-totoroHealth.text(totoro.health);
+var friend = new _friend2['default']();
+console.dir(friend);
+
+var enemy = new _life2['default']();
+console.dir(enemy);
+
+var makeFriend = (0, _jquery2['default'])('.make-friend');
+
+makeFriend.on('click', function () {
+
+  var bestFriend = new _friend2['default']();
+  totoro.health = 0;
+  console.log('a new friend has been created');
+
+  bestFriend.response();
+
+  var totoroHealth = (0, _jquery2['default'])('.healthAmt');
+  totoroHealth.text(totoro.health);
+});
+
+var makeEnemy = (0, _jquery2['default'])('.make-enemy');
+
+makeEnemy.on('click', function () {
+
+  var enemy = new _life2['default']();
+  totoro.health = 100;
+  console.log('you have chosen the dark path!');
+
+  enemy.response();
+
+  var totoroHealth = (0, _jquery2['default'])('.healthAmt');
+  totoroHealth.text(totoro.health);
+});
 
 },{"./friend":1,"./life":2,"./totoro":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){
 // Totoro is main character of game
@@ -88,7 +166,7 @@ totoroHealth.text(totoro.health);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var Totoro = function Totoro() {
+var Totoro = function Totoro(totoro) {
 
   this.health = 100;
   // this.hit = totoro.hit;

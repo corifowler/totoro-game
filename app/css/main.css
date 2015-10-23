@@ -2027,7 +2027,8 @@ html {
   content: ""; }
 
 body {
-  background: #e2ebf3; }
+  background: #e2ebf3;
+  font-family: 'Amaranth', sans-serif; }
 
 .container {
   max-width: 68em;
@@ -2079,7 +2080,7 @@ body {
       margin-right: 0; }
   .container .life img {
     width: 345px;
-    height: 335px; }
+    height: 300px; }
 
 .health {
   position: relative;
