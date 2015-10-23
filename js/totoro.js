@@ -3,8 +3,8 @@
 let Totoro = function() {
 
   this.health = 100;
-  this.hit = hit;
-  this.loved = loved;
+  // this.hit = totoro.hit;
+  // this.loved = totoro.loved;
 
 
 };

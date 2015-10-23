@@ -4,7 +4,6 @@
 let Friend = function() {
 
 
-  this.battleOptions = function(option, power) { return battleOptions; };
 
 };
 

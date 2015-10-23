@@ -5,9 +5,11 @@ import Friend from './friend';
 import Life from './life';
 import Totoro from './totoro';
 
-console.log('Hello, World');
+// Display Totoro's Health
 
-let mean = new Life();
+let totoro = new Totoro();
+console.dir(totoro);
 
-console.dir(mean);
+let totoroHealth = $('.healthAmt');
+totoroHealth.text(totoro.health);
 

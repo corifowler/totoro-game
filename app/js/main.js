@@ -7,12 +7,7 @@
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var Friend = function Friend() {
-
-  this.battleOptions = function (option, power) {
-    return battleOptions;
-  };
-};
+var Friend = function Friend() {};
 
 var leaf = { opt: 'leaf', pow: 20 };
 var cat = { opt: 'cat bus', pow: 20 };
@@ -77,11 +72,13 @@ var _totoro = require('./totoro');
 
 var _totoro2 = _interopRequireDefault(_totoro);
 
-console.log('Hello, World');
+// Display Totoro's Health
 
-var mean = new _life2['default']();
+var totoro = new _totoro2['default']();
+console.dir(totoro);
 
-console.dir(mean);
+var totoroHealth = (0, _jquery2['default'])('.healthAmt');
+totoroHealth.text(totoro.health);
 
 },{"./friend":1,"./life":2,"./totoro":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){
 // Totoro is main character of game
@@ -94,8 +91,8 @@ Object.defineProperty(exports, "__esModule", {
 var Totoro = function Totoro() {
 
   this.health = 100;
-  this.hit = hit;
-  this.loved = loved;
+  // this.hit = totoro.hit;
+  // this.loved = totoro.loved;
 };
 
 exports["default"] = Totoro;

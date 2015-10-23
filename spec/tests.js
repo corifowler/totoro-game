@@ -7,12 +7,7 @@
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var Friend = function Friend() {
-
-  this.battleOptions = function (option, power) {
-    return battleOptions;
-  };
-};
+var Friend = function Friend() {};
 
 var leaf = { opt: 'leaf', pow: 20 };
 var cat = { opt: 'cat bus', pow: 20 };
@@ -120,8 +115,8 @@ Object.defineProperty(exports, "__esModule", {
 var Totoro = function Totoro() {
 
   this.health = 100;
-  this.hit = hit;
-  this.loved = loved;
+  // this.hit = totoro.hit;
+  // this.loved = totoro.loved;
 };
 
 exports["default"] = Totoro;
