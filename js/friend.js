@@ -34,12 +34,12 @@ let Friend = function() {
 };
 
 
-let leaf = {opt: 'leaf', pow: 20 };
-let cat = {opt: 'cat bus', pow: 20};
-let forest = {opt: 'forest', pow: 20};
-let food = {opt: 'share food', pow: 10};
-let friend = {opt: 'be friendly', pow: 30};
-let perch = {opt: 'find perch', pow: 20};
+let leaf = {id: 1, opt: 'Give Totoro a leaf', pow: 20 };
+let cat = {id: 2, opt: 'Ride the cat bus. Meow!', pow: 20};
+let forest = {id: 3, opt: 'Find a safe place in the forest', pow: 20};
+let food = {id: 4, opt: 'Share a yummy snack', pow: 10};
+let friend = {id: 5, opt: 'Be friendly', pow: 30};
+let perch = {id: 6, opt: 'Find a perch', pow: 20};
 
 
 Friend.prototype.battleOptions = [leaf, cat, forest, food, friend, perch];

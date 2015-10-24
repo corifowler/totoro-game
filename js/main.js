@@ -5,7 +5,7 @@ import Friend from './friend';
 import Life from './life';
 import Totoro from './totoro';
 
-// Display Totoro's Health
+// Check Out Constructors
 
 let totoro = new Totoro();
 console.dir(totoro);
@@ -16,7 +16,10 @@ console.dir(friend);
 let enemy = new Life();
 console.dir(enemy);
 
+let specialId;
+let buttonId;
 
+// Playing Game as a Friend
 
 let makeFriend = $('.make-friend');
 
@@ -40,6 +43,31 @@ makeFriend.on('click', function() {
 
 });
 
+// Playing as Friend -picking answers
+
+let friendArena = $('.friend-choices');
+
+friendArena.on('click', function(button) {
+
+  console.log(button.target.id);
+
+  // let buttonId = btn.id;
+  // console.log(buttonId);
+
+
+});
+
+
+
+
+
+
+
+
+
+
+// Playing Game as Enemy/Life
+
 let makeEnemy = $('.make-enemy');
 
 makeEnemy.on('click', function() {
@@ -61,4 +89,6 @@ makeEnemy.on('click', function() {
   computer.computer();
 
 });
+
+
 
