@@ -18,6 +18,8 @@ console.dir(enemy);
 
 let specialId;
 let buttonId;
+let btnId;
+let power;
 
 // Playing Game as a Friend
 
@@ -45,24 +47,15 @@ makeFriend.on('click', function() {
 
 // Playing as Friend -picking answers
 
-let friendArena = $('.friend-choices');
+let friendPick = $('.friend-choices');
 
-friendArena.on('click', function(button) {
+friendPick.on('click', function(button) {
 
-  console.log(button.target.id);
+  buttonId = button.target.id;
 
-  // let buttonId = btn.id;
-  // console.log(buttonId);
-
+  console.log(buttonId);
 
 });
-
-
-
-
-
-
-
 
 
 
@@ -86,9 +79,35 @@ makeEnemy.on('click', function() {
   $('.computer-friend').fadeIn(3000);
 
   enemy.response();
-  computer.computer();
 
+  let enemyPick = $('.life-choices');
+
+  // Playing as Enemy - picking choices
+
+  enemyPick.on('click', function(btn) {
+
+    computer.computer();
+
+    btnId = btn.target.id;
+
+    console.log(btnId);
+
+    power = Life.prototype.meanOptions[btnId].pow;
+
+    console.log(power);
+
+    if (btnId === specialId) {
+      console.log('it matches');
+      totoro.health = totoro.health + Number(power);
+    } else {
+      console.log('wrong choice');
+      totoro.health = totoro.health - Number(power);
+    }
+
+    let totoroHealth = $('.healthAmt');
+    totoroHealth.text(totoro.health);
+
+  });
+  
 });
-
-
 

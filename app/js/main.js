@@ -21,11 +21,13 @@ var _moment2 = _interopRequireDefault(_moment);
 
 // This is the 'good guy'
 
+var specialId = undefined;
+
 var Friend = function Friend() {
 
   this.response = function () {
 
-    var template = ' \n        <button id="1">' + Friend.prototype.battleOptions[0].opt + '</button>\n        <button id="2">' + Friend.prototype.battleOptions[1].opt + '</button>\n        <button id="3">' + Friend.prototype.battleOptions[2].opt + '</button>\n        <button id="4">' + Friend.prototype.battleOptions[3].opt + '</button>\n        <button id="5">' + Friend.prototype.battleOptions[4].opt + '</button>\n        <button id="6">' + Friend.prototype.battleOptions[5].opt + '</button>';
+    var template = ' \n        <button id="0">' + Friend.prototype.battleOptions[0].opt + '</button>\n        <button id="1">' + Friend.prototype.battleOptions[1].opt + '</button>\n        <button id="2">' + Friend.prototype.battleOptions[2].opt + '</button>\n        <button id="3">' + Friend.prototype.battleOptions[3].opt + '</button>\n        <button id="4">' + Friend.prototype.battleOptions[4].opt + '</button>\n        <button id="5">' + Friend.prototype.battleOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.friend-choices').append(template);
   };
@@ -37,6 +39,12 @@ var Friend = function Friend() {
     var template = '\n      <div class="ch">' + Friend.prototype.battleOptions[numPick].opt + '</div>';
 
     (0, _jquery2['default'])('.computer-friend').append(template);
+
+    specialId = Friend.prototype.battleOptions[numPick].id;
+
+    console.log(specialId);
+
+    return specialId;
   };
 };
 
@@ -83,7 +91,7 @@ var Life = function Life() {
 
   this.response = function () {
 
-    var template = ' \n        <button>' + Life.prototype.meanOptions[0].opt + '</button>\n        <button>' + Life.prototype.meanOptions[1].opt + '</button>\n        <button>' + Life.prototype.meanOptions[2].opt + '</button>\n        <button>' + Life.prototype.meanOptions[3].opt + '</button>\n        <button>' + Life.prototype.meanOptions[4].opt + '</button>\n        <button>' + Life.prototype.meanOptions[5].opt + '</button>';
+    var template = ' \n        <button id="0">' + Life.prototype.meanOptions[0].opt + '</button>\n        <button id="1">' + Life.prototype.meanOptions[1].opt + '</button>\n        <button id="2">' + Life.prototype.meanOptions[2].opt + '</button>\n        <button id="3">' + Life.prototype.meanOptions[3].opt + '</button>\n        <button id="4">' + Life.prototype.meanOptions[4].opt + '</button>\n        <button id="5">' + Life.prototype.meanOptions[5].opt + '</button>';
 
     (0, _jquery2['default'])('.life-choices').append(template);
   };
@@ -158,6 +166,8 @@ console.dir(enemy);
 
 var specialId = undefined;
 var buttonId = undefined;
+var btnId = undefined;
+var power = undefined;
 
 // Playing Game as a Friend
 
@@ -184,14 +194,13 @@ makeFriend.on('click', function () {
 
 // Playing as Friend -picking answers
 
-var friendArena = (0, _jquery2['default'])('.friend-choices');
+var friendPick = (0, _jquery2['default'])('.friend-choices');
 
-friendArena.on('click', function (button) {
+friendPick.on('click', function (button) {
 
-  console.log(button.target.id);
+  buttonId = button.target.id;
 
-  // let buttonId = btn.id;
-  // console.log(buttonId);
+  console.log(buttonId);
 });
 
 // Playing Game as Enemy/Life
@@ -214,7 +223,34 @@ makeEnemy.on('click', function () {
   (0, _jquery2['default'])('.computer-friend').fadeIn(3000);
 
   enemy.response();
-  computer.computer();
+
+  var enemyPick = (0, _jquery2['default'])('.life-choices');
+
+  // Playing as Enemy - picking choices
+
+  enemyPick.on('click', function (btn) {
+
+    computer.computer();
+
+    btnId = btn.target.id;
+
+    console.log(btnId);
+
+    power = _life2['default'].prototype.meanOptions[btnId].pow;
+
+    console.log(power);
+
+    if (btnId === specialId) {
+      console.log('it matches');
+      totoro.health = totoro.health + Number(power);
+    } else {
+      console.log('wrong choice');
+      totoro.health = totoro.health - Number(power);
+    }
+
+    var totoroHealth = (0, _jquery2['default'])('.healthAmt');
+    totoroHealth.text(totoro.health);
+  });
 });
 
 },{"./friend":1,"./life":2,"./totoro":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){

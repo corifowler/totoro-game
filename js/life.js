@@ -11,12 +11,12 @@ let Life = function() {
   this.response = function() { 
 
     let template = ` 
-        <button>${ Life.prototype.meanOptions[0].opt }</button>
-        <button>${ Life.prototype.meanOptions[1].opt }</button>
-        <button>${ Life.prototype.meanOptions[2].opt }</button>
-        <button>${ Life.prototype.meanOptions[3].opt }</button>
-        <button>${ Life.prototype.meanOptions[4].opt }</button>
-        <button>${ Life.prototype.meanOptions[5].opt }</button>`;
+        <button id="0">${ Life.prototype.meanOptions[0].opt }</button>
+        <button id="1">${ Life.prototype.meanOptions[1].opt }</button>
+        <button id="2">${ Life.prototype.meanOptions[2].opt }</button>
+        <button id="3">${ Life.prototype.meanOptions[3].opt }</button>
+        <button id="4">${ Life.prototype.meanOptions[4].opt }</button>
+        <button id="5">${ Life.prototype.meanOptions[5].opt }</button>`;
 
     $('.life-choices').append(template);
 

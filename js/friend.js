@@ -4,19 +4,22 @@ import moment from 'moment';
 
 // This is the 'good guy'
 
+let specialId;
+
 let Friend = function() {
 
   this.response = function() { 
 
     let template = ` 
-        <button id="1">${ Friend.prototype.battleOptions[0].opt }</button>
-        <button id="2">${ Friend.prototype.battleOptions[1].opt }</button>
-        <button id="3">${ Friend.prototype.battleOptions[2].opt }</button>
-        <button id="4">${ Friend.prototype.battleOptions[3].opt }</button>
-        <button id="5">${ Friend.prototype.battleOptions[4].opt }</button>
-        <button id="6">${ Friend.prototype.battleOptions[5].opt }</button>`;
+        <button id="0">${ Friend.prototype.battleOptions[0].opt }</button>
+        <button id="1">${ Friend.prototype.battleOptions[1].opt }</button>
+        <button id="2">${ Friend.prototype.battleOptions[2].opt }</button>
+        <button id="3">${ Friend.prototype.battleOptions[3].opt }</button>
+        <button id="4">${ Friend.prototype.battleOptions[4].opt }</button>
+        <button id="5">${ Friend.prototype.battleOptions[5].opt }</button>`;
 
     $('.friend-choices').append(template);
+
 
   };
 
@@ -28,6 +31,12 @@ let Friend = function() {
       <div class="ch">${ Friend.prototype.battleOptions[numPick].opt}</div>`;
 
     $('.computer-friend').append(template);
+
+    specialId = Friend.prototype.battleOptions[numPick].id;
+
+    console.log(specialId);
+
+    return specialId;
 
   };
 
