@@ -2126,6 +2126,38 @@ body {
   -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%; }
 
+.f-instructions {
+  max-width: 80%;
+  margin: 0 auto;
+  display: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px; }
+  .f-instructions button {
+    width: 200px;
+    background: none;
+    margin-left: 39%;
+    margin-bottom: 1%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px; }
+
+.e-instructions {
+  max-width: 80%;
+  margin: 0 auto;
+  display: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px; }
+  .e-instructions button {
+    width: 200px;
+    background: none;
+    margin-left: 39%;
+    margin-bottom: 1%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px; }
+
 .totoro {
   float: left;
   display: block;

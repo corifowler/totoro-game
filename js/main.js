@@ -28,11 +28,23 @@ makeFriend.on('click', function() {
   let totoroHealth = $('.healthAmt');
   totoroHealth.text(totoro.health);
 
+  // Fade out to instructions screen
+
   $('.friend').fadeOut(1000);
   $('.life').fadeOut(1000);
-  $('.totoro').fadeIn(3000);
-  $('.friend-arena').fadeIn(3000);
-  $('.computer-enemy').fadeIn(3000);
+  $('.f-instructions').fadeIn(3000);
+
+  let playBtn = $('.f-play');
+
+  // Create play arena
+
+  playBtn.on('click', function() {
+    console.log('ready to play');
+    $('.f-instructions').fadeOut(1000);
+    $('.totoro').fadeIn(3000);
+    $('.friend-arena').fadeIn(3000);
+    $('.computer-enemy').fadeIn(3000);
+  });
 
   bestFriend.response();
   specialId = _.random(0,5);
@@ -90,11 +102,23 @@ makeEnemy.on('click', function() {
   let totoroHealth = $('.healthAmt');
   totoroHealth.text(totoro.health);
 
+  // Bring up instructions
+
   $('.life').fadeOut(1000);
   $('.friend').fadeOut(1000);
-  $('.totoro').fadeIn(3000);
-  $('.enemy-arena').fadeIn(3000);
-  $('.computer-friend').fadeIn(3000);
+  $('.e-instructions').fadeIn(3000);
+
+  // Create game arena
+
+  let playBtn = $('.e-play');
+
+  playBtn.on('click', function() {
+    console.log('ready to play');
+    $('.e-instructions').fadeOut(1000);
+    $('.totoro').fadeIn(3000);
+    $('.enemy-arena').fadeIn(3000);
+    $('.computer-friend').fadeIn(3000);
+  });
 
   enemy.response();
 
