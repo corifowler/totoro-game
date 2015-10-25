@@ -93,6 +93,8 @@ var Life = function Life() {
     var template = '\n      <div class="ch">' + Life.prototype.meanOptions[numPick].opt + '</div>';
 
     (0, _jquery2['default'])('.comp-answer-2').html(template);
+
+    return Life.prototype.meanOptoins[numPick].opt;
   };
 };
 
@@ -160,6 +162,30 @@ var _totoro2 = _interopRequireDefault(_totoro);
       });
     });
 
+    describe('life(enemy) response options', function () {
+      it('should create list of options when called', function () {
+        expect(y.response).to.not['throw'](Error);
+      });
+    });
+
+    describe('life should have prototype of options', function () {
+      it('should have prototype options', function () {
+        expect(_life2['default'].prototype.meanOptions).to.be.an('array');
+      });
+    });
+
+    describe('friend response options', function () {
+      it('should create list of options when called', function () {
+        expect(x.response).to.not['throw'](Error);
+      });
+    });
+
+    describe('friend should have prototype of options', function () {
+      it('should have prototype options', function () {
+        expect(_friend2['default'].prototype.battleOptions).to.be.an('array');
+      });
+    });
+
     // describe('totoro taking damage', function() {
     //   it('should lower the score, after getting hit', function() {
     //     x.hit();
@@ -180,8 +206,6 @@ Object.defineProperty(exports, "__esModule", {
 var Totoro = function Totoro(totoro) {
 
   this.health = 100;
-  // this.hit = totoro.hit;
-  // this.loved = totoro.loved;
 };
 
 exports["default"] = Totoro;

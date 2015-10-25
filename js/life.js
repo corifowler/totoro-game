@@ -29,6 +29,8 @@ let Life = function() {
 
     $('.comp-answer-2').html(template);
 
+    return Life.prototype.meanOptoins[numPick].opt;
+
   };
 
 };

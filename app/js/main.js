@@ -93,6 +93,8 @@ var Life = function Life() {
     var template = '\n      <div class="ch">' + Life.prototype.meanOptions[numPick].opt + '</div>';
 
     (0, _jquery2['default'])('.comp-answer-2').html(template);
+
+    return Life.prototype.meanOptoins[numPick].opt;
   };
 };
 
@@ -304,8 +306,6 @@ Object.defineProperty(exports, "__esModule", {
 var Totoro = function Totoro(totoro) {
 
   this.health = 100;
-  // this.hit = totoro.hit;
-  // this.loved = totoro.loved;
 };
 
 exports["default"] = Totoro;

@@ -37,6 +37,30 @@ import Totoro from './totoro';
       });
     });
 
+    describe('life(enemy) response options', function() {
+      it('should create list of options when called', function() {
+        expect(y.response).to.not.throw(Error);
+      });
+    });
+
+    describe('life should have prototype of options', function() {
+      it('should have prototype options', function() {
+        expect(Life.prototype.meanOptions).to.be.an('array');
+      });
+    });
+
+    describe('friend response options', function() {
+      it('should create list of options when called', function() {
+        expect(x.response).to.not.throw(Error);
+      });
+    });
+
+    describe('friend should have prototype of options', function() {
+      it('should have prototype options', function() {
+        expect(Friend.prototype.battleOptions).to.be.an('array');
+      });
+    });
+
     // describe('totoro taking damage', function() {
     //   it('should lower the score, after getting hit', function() {
     //     x.hit();
