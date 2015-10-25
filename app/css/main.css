@@ -2187,7 +2187,9 @@ body {
   margin-right: 2.35765%;
   width: 31.76157%;
   display: none;
-  background-color: white; }
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 298px; }
   .friend-arena:last-child {
     margin-right: 0; }
   .friend-arena h2 {
@@ -2197,7 +2199,8 @@ body {
     margin: 10px;
     border: 1px solid black;
     border-radius: 3px;
-    background: none; }
+    background-color: white;
+    max-width: 90%; }
 
 .enemy-arena {
   float: left;
@@ -2206,15 +2209,20 @@ body {
   width: 31.76157%;
   margin-right: 0;
   display: none;
-  background-color: white; }
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 298px; }
   .enemy-arena:last-child {
     margin-right: 0; }
+  .enemy-arena h2 {
+    margin-left: 5px; }
   .enemy-arena .life-choices button {
     display: block;
     margin: 10px;
     border: 1px solid black;
     border-radius: 3px;
-    background: none; }
+    background-color: white;
+    max-width: 90%; }
 
 .computer-enemy {
   float: left;
@@ -2222,9 +2230,14 @@ body {
   margin-right: 2.35765%;
   width: 31.76157%;
   margin-right: 0;
-  display: none; }
+  display: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 298px; }
   .computer-enemy:last-child {
     margin-right: 0; }
+  .computer-enemy h2 {
+    margin-left: 5px; }
   .computer-enemy span {
     margin-left: 34%; }
 
@@ -2233,9 +2246,14 @@ body {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  display: none; }
+  display: none;
+  height: 298px;
+  border: 1px solid black;
+  border-radius: 3px; }
   .computer-friend:last-child {
     margin-right: 0; }
+  .computer-friend h2 {
+    margin-left: 5px; }
   .computer-friend span {
     margin-left: 34%; }
 
@@ -2256,5 +2274,7 @@ body {
   border-radius: 3px;
   padding: 5px;
   text-align: center; }
+  .all-i-do-is-win img {
+    margin-left: -8%; }
 
 /*# sourceMappingURL=main.css.map */

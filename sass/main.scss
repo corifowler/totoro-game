@@ -176,7 +176,9 @@ body {
 .friend-arena {
 	@include span-columns(4);
 	display: none;
-	background-color: white;
+	border: 1px solid black;
+	border-radius: 3px;
+	height: 298px;
 
 	h2 {
 		margin-left: 5px;
@@ -187,7 +189,8 @@ body {
 		margin: 10px;
 		border: 1px solid black;
 		border-radius: 3px;
-		background: none;
+		background-color: white;
+		max-width: 90%;
 	}
 }
 
@@ -195,14 +198,21 @@ body {
 	@include span-columns(4);
 	@include omega();
 	display: none;
-	background-color: white;
+	border: 1px solid black;
+	border-radius: 3px;
+	height: 298px;
+
+	h2 {
+		margin-left: 5px;
+	}
 
 	.life-choices button {
 		display: block;
 		margin: 10px;
 		border: 1px solid black;
 		border-radius: 3px;
-		background: none;
+		background-color: white;
+		max-width: 90%;
 	}
 }
 
@@ -210,6 +220,13 @@ body {
 	@include span-columns(4);
 	@include omega();
 	display: none;
+	border: 1px solid black;
+	border-radius: 3px;
+	height: 298px;
+
+	h2 {
+		margin-left: 5px;
+	}
 
 	span {
 		margin-left: 34%;
@@ -219,6 +236,13 @@ body {
 .computer-friend {
 	@include span-columns(4);
 	display: none;
+	height: 298px;
+	border: 1px solid black;
+	border-radius: 3px;
+
+	h2 {
+		margin-left: 5px;
+	}
 
 	span {
 		margin-left: 34%;
@@ -243,4 +267,8 @@ body {
 	border-radius: 3px;
 	padding: 5px;
 	text-align: center;
+
+	img {
+		margin-left: -8%;
+	}
 }
