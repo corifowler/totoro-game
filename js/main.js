@@ -16,10 +16,10 @@ console.dir(friend);
 let enemy = new Life();
 console.dir(enemy);
 
-let specialId;
 let buttonId;
 let btnId;
 let power;
+let specialId;
 
 // Playing Game as a Friend
 
@@ -28,7 +28,6 @@ let makeFriend = $('.make-friend');
 makeFriend.on('click', function() {
 
   let bestFriend = new Friend();
-  let computer = new Life();
   totoro.health = 0;
   console.log('a new friend has been created');
 
@@ -41,19 +40,36 @@ makeFriend.on('click', function() {
   $('.computer-enemy').fadeIn(3000);
 
   bestFriend.response();
-  computer.computer();
 
-});
+  let friendPick = $('.friend-choices');
 
-// Playing as Friend -picking answers
+  // Playing as Friend -picking answers
 
-let friendPick = $('.friend-choices');
+  friendPick.on('click', function(button) {
 
-friendPick.on('click', function(button) {
+    buttonId = button.target.id;
 
-  buttonId = button.target.id;
+    console.log(buttonId);
 
-  console.log(buttonId);
+    power = Friend.prototype.battleOptions[buttonId].pow;
+
+    console.log(power);
+
+    if (buttonId === specialId) {
+      console.log('it matches');
+      totoro.health = totoro.health + Number(power);
+      totoroHealth.text(totoro.health);
+    } else {
+      console.log('wrong choice');
+      totoro.health = totoro.health - Number(power);
+      totoroHealth.text(totoro.health);
+    }
+
+  });
+
+
+  // let totoroHealth = $('.healthAmt');
+  // totoroHealth.text(totoro.health);
 
 });
 
@@ -86,8 +102,9 @@ makeEnemy.on('click', function() {
 
   enemyPick.on('click', function(btn) {
 
-    computer.computer();
-
+    specialId = _.random(0,5);
+    console.log(specialId);
+    computer.computer(specialId);
     btnId = btn.target.id;
 
     console.log(btnId);
@@ -96,12 +113,12 @@ makeEnemy.on('click', function() {
 
     console.log(power);
 
-    if (btnId === specialId) {
+    if (Number(btnId) === Number(specialId)) {
       console.log('it matches');
-      totoro.health = totoro.health + Number(power);
+      totoro.health = totoro.health - Number(power);
     } else {
       console.log('wrong choice');
-      totoro.health = totoro.health - Number(power);
+      totoro.health = totoro.health + Number(power);
     }
 
     let totoroHealth = $('.healthAmt');
@@ -110,4 +127,6 @@ makeEnemy.on('click', function() {
   });
   
 });
+
+
 

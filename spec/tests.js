@@ -21,7 +21,7 @@ var _moment2 = _interopRequireDefault(_moment);
 
 // This is the 'good guy'
 
-var specialId = undefined;
+// let specialId;
 
 var Friend = function Friend() {
 
@@ -32,28 +32,20 @@ var Friend = function Friend() {
     (0, _jquery2['default'])('.friend-choices').append(template);
   };
 
-  this.computer = function () {
-
-    var numPick = _underscore2['default'].random(0, 5);
+  this.computer = function (numPick) {
 
     var template = '\n      <div class="ch">' + Friend.prototype.battleOptions[numPick].opt + '</div>';
 
     (0, _jquery2['default'])('.computer-friend').append(template);
-
-    specialId = Friend.prototype.battleOptions[numPick].id;
-
-    console.log(specialId);
-
-    return specialId;
   };
 };
 
-var leaf = { id: 1, opt: 'Give Totoro a leaf', pow: 20 };
-var cat = { id: 2, opt: 'Ride the cat bus. Meow!', pow: 20 };
-var forest = { id: 3, opt: 'Find a safe place in the forest', pow: 20 };
-var food = { id: 4, opt: 'Share a yummy snack', pow: 10 };
-var friend = { id: 5, opt: 'Be friendly', pow: 30 };
-var perch = { id: 6, opt: 'Find a perch', pow: 20 };
+var leaf = { id: 0, opt: 'Give Totoro a leaf', pow: 20 };
+var cat = { id: 1, opt: 'Ride the cat bus. Meow!', pow: 20 };
+var forest = { id: 2, opt: 'Find a safe place in the forest', pow: 20 };
+var food = { id: 3, opt: 'Share a yummy snack', pow: 10 };
+var friend = { id: 4, opt: 'Be friendly', pow: 30 };
+var perch = { id: 5, opt: 'Find a perch', pow: 20 };
 
 Friend.prototype.battleOptions = [leaf, cat, forest, food, friend, perch];
 
@@ -96,28 +88,29 @@ var Life = function Life() {
     (0, _jquery2['default'])('.life-choices').append(template);
   };
 
-  this.computer = function () {
+  // this.computer = function() {
 
-    var numPick = _underscore2['default'].random(0, 5);
+  //   let numPick = _.random(0,5);
 
-    var template = '\n      <div class="ch">' + Life.prototype.meanOptions[numPick].opt + '</div>';
+  //   let template = `
+  //     <div class="ch">${ Life.prototype.meanOptions[numPick].opt}</div>`;
 
-    (0, _jquery2['default'])('.computer-enemy').append(template);
+  //   $('.computer-enemy').append(template);
 
-    specialId = Life.prototype.meanOptions[numPick].id;
+  //   let specialId = Life.prototype.meanOptions[numPick].id;
 
-    console.log(specialId);
+  //   console.log(specialId);
+  // };
 
-    return specialId;
-  };
+  return specialId;
 };
 
-var rain = { id: 1, opt: 'It is raining', pow: 20 };
-var time = { id: 2, opt: 'Totoro is running late', pow: 20 };
-var sleepy = { id: 3, opt: 'Totoro is getting sleepy', pow: 20 };
-var hungry = { id: 4, opt: 'Totoro is feeling hungry', pow: 10 };
-var sad = { id: 5, opt: 'Totoro is feeling lonely', pow: 30 };
-var night = { id: 6, opt: 'It is getting dark outside', pow: 20 };
+var rain = { id: 0, opt: 'It is raining', pow: 20 };
+var time = { id: 1, opt: 'Totoro is running late', pow: 20 };
+var sleepy = { id: 2, opt: 'Totoro is getting sleepy', pow: 20 };
+var hungry = { id: 3, opt: 'Totoro is feeling hungry', pow: 10 };
+var sad = { id: 4, opt: 'Totoro is feeling lonely', pow: 30 };
+var night = { id: 5, opt: 'It is getting dark outside', pow: 20 };
 
 Life.prototype.meanOptions = [rain, time, sleepy, hungry, sad, night];
 

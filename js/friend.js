@@ -4,7 +4,7 @@ import moment from 'moment';
 
 // This is the 'good guy'
 
-let specialId;
+// let specialId;
 
 let Friend = function() {
 
@@ -23,32 +23,23 @@ let Friend = function() {
 
   };
 
-  this.computer = function() {
-
-    let numPick = _.random(0,5);
+  this.computer = function(numPick) {
 
     let template = `
       <div class="ch">${ Friend.prototype.battleOptions[numPick].opt}</div>`;
 
     $('.computer-friend').append(template);
-
-    specialId = Friend.prototype.battleOptions[numPick].id;
-
-    console.log(specialId);
-
-    return specialId;
-
   };
 
 };
 
 
-let leaf = {id: 1, opt: 'Give Totoro a leaf', pow: 20 };
-let cat = {id: 2, opt: 'Ride the cat bus. Meow!', pow: 20};
-let forest = {id: 3, opt: 'Find a safe place in the forest', pow: 20};
-let food = {id: 4, opt: 'Share a yummy snack', pow: 10};
-let friend = {id: 5, opt: 'Be friendly', pow: 30};
-let perch = {id: 6, opt: 'Find a perch', pow: 20};
+let leaf = {id: 0, opt: 'Give Totoro a leaf', pow: 20 };
+let cat = {id: 1, opt: 'Ride the cat bus. Meow!', pow: 20};
+let forest = {id: 2, opt: 'Find a safe place in the forest', pow: 20};
+let food = {id: 3, opt: 'Share a yummy snack', pow: 10};
+let friend = {id: 4, opt: 'Be friendly', pow: 30};
+let perch = {id: 5, opt: 'Find a perch', pow: 20};
 
 
 Friend.prototype.battleOptions = [leaf, cat, forest, food, friend, perch];

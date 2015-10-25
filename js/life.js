@@ -22,31 +22,31 @@ let Life = function() {
 
   };
 
-  this.computer = function() {
+  // this.computer = function() {
 
-    let numPick = _.random(0,5);
+  //   let numPick = _.random(0,5);
 
-    let template = `
-      <div class="ch">${ Life.prototype.meanOptions[numPick].opt}</div>`;
+  //   let template = `
+  //     <div class="ch">${ Life.prototype.meanOptions[numPick].opt}</div>`;
 
-    $('.computer-enemy').append(template);
+  //   $('.computer-enemy').append(template);
 
-    specialId = Life.prototype.meanOptions[numPick].id;
+  //   let specialId = Life.prototype.meanOptions[numPick].id;
 
-    console.log(specialId);
+  //   console.log(specialId);
+  // };
 
-    return specialId;
-  };
+  return specialId;
 
 };
 
 
-let rain = {id: 1, opt: 'It is raining', pow: 20 };
-let time = {id: 2, opt: 'Totoro is running late', pow: 20};
-let sleepy = {id: 3,opt: 'Totoro is getting sleepy', pow: 20};
-let hungry = {id: 4, opt: 'Totoro is feeling hungry', pow: 10};
-let sad = {id: 5, opt: 'Totoro is feeling lonely', pow: 30};
-let night = {id: 6, opt: 'It is getting dark outside', pow: 20};
+let rain = {id: 0, opt: 'It is raining', pow: 20 };
+let time = {id: 1, opt: 'Totoro is running late', pow: 20};
+let sleepy = {id: 2,opt: 'Totoro is getting sleepy', pow: 20};
+let hungry = {id: 3, opt: 'Totoro is feeling hungry', pow: 10};
+let sad = {id: 4, opt: 'Totoro is feeling lonely', pow: 30};
+let night = {id: 5, opt: 'It is getting dark outside', pow: 20};
 
 
 Life.prototype.meanOptions = [rain, time, sleepy, hungry, sad, night];
