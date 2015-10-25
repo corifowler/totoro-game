@@ -78,10 +78,6 @@ makeFriend.on('click', function() {
 
   });
 
-
-  // let totoroHealth = $('.healthAmt');
-  // totoroHealth.text(totoro.health);
-
 });
 
 

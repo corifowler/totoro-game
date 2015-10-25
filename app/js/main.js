@@ -207,9 +207,6 @@ makeFriend.on('click', function () {
       computer.computer(specialId);
     }
   });
-
-  // let totoroHealth = $('.healthAmt');
-  // totoroHealth.text(totoro.health);
 });
 
 // Playing Game as Enemy/Life
