@@ -5,16 +5,9 @@ import Friend from './friend';
 import Life from './life';
 import Totoro from './totoro';
 
-// Check Out Constructors
+// Pre-Define Variables
 
 let totoro = new Totoro();
-console.dir(totoro);
-
-let friend = new Friend();
-console.dir(friend);
-
-let enemy = new Life();
-console.dir(enemy);
 
 let buttonId;
 let btnId;
@@ -37,6 +30,7 @@ makeFriend.on('click', function() {
 
   $('.friend').fadeOut(1000);
   $('.life').fadeOut(1000);
+  $('.totoro').fadeIn(3000);
   $('.friend-arena').fadeIn(3000);
   $('.computer-enemy').fadeIn(3000);
 
@@ -98,6 +92,7 @@ makeEnemy.on('click', function() {
 
   $('.life').fadeOut(1000);
   $('.friend').fadeOut(1000);
+  $('.totoro').fadeIn(3000);
   $('.enemy-arena').fadeIn(3000);
   $('.computer-friend').fadeIn(3000);
 

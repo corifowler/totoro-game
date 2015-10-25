@@ -137,16 +137,9 @@ var _totoro = require('./totoro');
 
 var _totoro2 = _interopRequireDefault(_totoro);
 
-// Check Out Constructors
+// Pre-Define Variables
 
 var totoro = new _totoro2['default']();
-console.dir(totoro);
-
-var friend = new _friend2['default']();
-console.dir(friend);
-
-var enemy = new _life2['default']();
-console.dir(enemy);
 
 var buttonId = undefined;
 var btnId = undefined;
@@ -169,6 +162,7 @@ makeFriend.on('click', function () {
 
   (0, _jquery2['default'])('.friend').fadeOut(1000);
   (0, _jquery2['default'])('.life').fadeOut(1000);
+  (0, _jquery2['default'])('.totoro').fadeIn(3000);
   (0, _jquery2['default'])('.friend-arena').fadeIn(3000);
   (0, _jquery2['default'])('.computer-enemy').fadeIn(3000);
 
@@ -225,6 +219,7 @@ makeEnemy.on('click', function () {
 
   (0, _jquery2['default'])('.life').fadeOut(1000);
   (0, _jquery2['default'])('.friend').fadeOut(1000);
+  (0, _jquery2['default'])('.totoro').fadeIn(3000);
   (0, _jquery2['default'])('.enemy-arena').fadeIn(3000);
   (0, _jquery2['default'])('.computer-friend').fadeIn(3000);
 

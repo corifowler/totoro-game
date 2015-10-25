@@ -2027,7 +2027,7 @@ html {
   content: ""; }
 
 body {
-  background: #e2ebf3;
+  background: #fff0f3;
   font-family: 'Amaranth', sans-serif; }
 
 .container {
@@ -2038,56 +2038,50 @@ body {
     clear: both;
     content: "";
     display: table; }
+  .container h1 {
+    text-align: center; }
   .container .friend {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
+    width: 48.82117%;
     height: 409px; }
     .container .friend:last-child {
       margin-right: 0; }
     .container .friend h2 {
-      margin-left: 5px; }
+      margin-left: 5px;
+      text-align: center; }
   .container .make-friend {
-    margin-left: 36%;
+    width: 200px;
+    background: none;
+    margin-left: 32%;
     margin-top: 10%;
     padding: 5px;
+    border: 1px solid black;
     border-radius: 3px; }
   .container .friend img {
     width: 300px;
     margin-top: 50px;
-    margin-left: 10px; }
-  .container .totoro {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    color: white; }
-    .container .totoro:last-child {
-      margin-right: 0; }
-  .container .totoro .health .healthAmt {
-    position: absolute;
-    left: 29px;
-    z-index: 10;
-    top: 20px;
-    font-size: 26px;
-    font-weight: bold; }
-  .container .totoro img {
-    width: 200px;
-    margin-left: 65px; }
+    margin-left: 118px; }
   .container .life {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
+    width: 48.82117%;
     margin-right: 0; }
     .container .life:last-child {
       margin-right: 0; }
+    .container .life h2 {
+      text-align: center; }
   .container .life img {
     width: 345px;
-    height: 300px; }
+    height: 294px;
+    margin-left: 94px; }
   .container .make-enemy {
-    margin-left: 28%;
+    width: 200px;
+    background: none;
+    border: 1px solid black;
+    margin-left: 34%;
     margin-top: 10%;
     padding: 5px;
     border-radius: 3px; }
@@ -2105,7 +2099,7 @@ body {
   top: 0;
   width: 50px;
   height: 80px;
-  background: pink;
+  background: #e9517f;
   -moz-border-radius: 50px 50px 0 0;
   border-radius: 50px 50px 0 0;
   -webkit-transform: rotate(-45deg);
@@ -2131,6 +2125,28 @@ body {
   -ms-transform-origin: 100% 100%;
   -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%; }
+
+.totoro {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  color: white;
+  display: none; }
+  .totoro:last-child {
+    margin-right: 0; }
+
+.totoro .health .healthAmt {
+  position: absolute;
+  left: 29px;
+  z-index: 10;
+  top: 20px;
+  font-size: 26px;
+  font-weight: bold; }
+
+.totoro img {
+  width: 200px;
+  margin-left: 65px; }
 
 .friend-arena {
   float: left;

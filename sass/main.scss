@@ -3,66 +3,64 @@
 @import "font-awesome";
 
 body {
-  background: #e2ebf3;
+  background: #fff0f3;
   font-family: 'Amaranth', sans-serif;
 }
 
 .container{
 	@include outer-container;
 
+	h1 {
+		text-align: center;
+	}
+
 	.friend {
-		@include span-columns(4);
+		@include span-columns(6);
 		height: 409px;
 
 		h2 {
 			margin-left: 5px;
+			text-align: center;
 		}
 	}
 
 	.make-friend{
-		margin-left: 36%;
+		width: 200px;
+		background: none;
+		margin-left: 32%;
 		margin-top: 10%;
 		padding: 5px;
+		border: 1px solid black;
 		border-radius: 3px;
 	}
 
 	.friend img {
 		width: 300px;
 		margin-top: 50px;
-		margin-left: 10px;
+		margin-left: 118px;
 	}
 
-	.totoro {
-		@include span-columns(4);
-		color: white;
-	}
-
-	.totoro .health .healthAmt {
-		position: absolute;
-		left: 29px;
-    z-index: 10;
-    top: 20px;
-    font-size: 26px;
-    font-weight: bold;
-	}
-
-	.totoro img {
-		width: 200px;
-		margin-left: 65px;
-	}
 
 	.life {
-		@include span-columns(4);
+		@include span-columns(6);
 		@include omega();
+
+		h2 {
+			text-align: center;
+		}
 	}
 
 	.life img {
 		width: 345px;
-		height: 300px;
+		height: 294px;
+		margin-left: 94px;
 	}
 
 	.make-enemy {
-		margin-left: 28%;
+		width: 200px;
+		background: none;
+		border: 1px solid black;
+		margin-left: 34%;
 		margin-top: 10%;
 		padding: 5px;
 		border-radius: 3px;
@@ -86,7 +84,7 @@ body {
     top: 0;
     width: 50px;
     height: 80px;
-    background: pink;
+    background: #e9517f;
     -moz-border-radius: 50px 50px 0 0;
     border-radius: 50px 50px 0 0;
     -webkit-transform: rotate(-45deg);
@@ -115,6 +113,26 @@ body {
 }
 
 // Hidden Classes
+
+	.totoro {
+		@include span-columns(4);
+		color: white;
+		display: none;
+	}
+
+	.totoro .health .healthAmt {
+		position: absolute;
+		left: 29px;
+    z-index: 10;
+    top: 20px;
+    font-size: 26px;
+    font-weight: bold;
+	}
+
+	.totoro img {
+		width: 200px;
+		margin-left: 65px;
+	}
 
 .friend-arena {
 	@include span-columns(4);
