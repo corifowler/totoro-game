@@ -94,7 +94,7 @@ var Life = function Life() {
 
     (0, _jquery2['default'])('.comp-answer-2').html(template);
 
-    return Life.prototype.meanOptoins[numPick].opt;
+    return Life.prototype.meanOptions[numPick].opt;
   };
 };
 
@@ -185,13 +185,6 @@ var _totoro2 = _interopRequireDefault(_totoro);
         expect(_friend2['default'].prototype.battleOptions).to.be.an('array');
       });
     });
-
-    // describe('totoro taking damage', function() {
-    //   it('should lower the score, after getting hit', function() {
-    //     x.hit();
-    //     expect(x.health).to.be.below(100);
-    //   });
-    // });
   });
 })();
 

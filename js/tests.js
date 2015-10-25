@@ -60,14 +60,6 @@ import Totoro from './totoro';
         expect(Friend.prototype.battleOptions).to.be.an('array');
       });
     });
-
-    // describe('totoro taking damage', function() {
-    //   it('should lower the score, after getting hit', function() {
-    //     x.hit();
-    //     expect(x.health).to.be.below(100);
-    //   });
-    // });
-
   });
 
 }());

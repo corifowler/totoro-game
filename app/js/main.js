@@ -94,7 +94,7 @@ var Life = function Life() {
 
     (0, _jquery2['default'])('.comp-answer-2').html(template);
 
-    return Life.prototype.meanOptoins[numPick].opt;
+    return Life.prototype.meanOptions[numPick].opt;
   };
 };
 
