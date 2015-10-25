@@ -28,6 +28,7 @@ let makeFriend = $('.make-friend');
 makeFriend.on('click', function() {
 
   let bestFriend = new Friend();
+  let computer = new Life();
   totoro.health = 0;
   console.log('a new friend has been created');
 
@@ -40,6 +41,8 @@ makeFriend.on('click', function() {
   $('.computer-enemy').fadeIn(3000);
 
   bestFriend.response();
+  specialId = _.random(0,5);
+  computer.computer(specialId);
 
   let friendPick = $('.friend-choices');
 
@@ -55,7 +58,7 @@ makeFriend.on('click', function() {
 
     console.log(power);
 
-    if (buttonId === specialId) {
+    if (Number(buttonId) === Number(specialId)) {
       console.log('it matches');
       totoro.health = totoro.health + Number(power);
       totoroHealth.text(totoro.health);
@@ -64,6 +67,14 @@ makeFriend.on('click', function() {
       totoro.health = totoro.health - Number(power);
       totoroHealth.text(totoro.health);
     }
+
+    if (totoro.health >= 100) {
+      console.log('you are a good friend');
+    } else {
+      specialId = _.random(0,5);
+      computer.computer(specialId);
+    }
+
 
   });
 
@@ -121,8 +132,13 @@ makeEnemy.on('click', function() {
       totoro.health = totoro.health + Number(power);
     }
 
-    let totoroHealth = $('.healthAmt');
-    totoroHealth.text(totoro.health);
+    if (totoro.health <= 0) {
+      console.log('you destroyed totoro');
+    } else {
+      let totoroHealth = $('.healthAmt');
+      totoroHealth.text(totoro.health);
+    }
+
 
   });
   

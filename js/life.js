@@ -22,21 +22,14 @@ let Life = function() {
 
   };
 
-  // this.computer = function() {
+  this.computer = function(numPick) {
 
-  //   let numPick = _.random(0,5);
+    let template = `
+      <div class="ch">${ Life.prototype.meanOptions[numPick].opt}</div>`;
 
-  //   let template = `
-  //     <div class="ch">${ Life.prototype.meanOptions[numPick].opt}</div>`;
+    $('.computer-enemy').append(template);
 
-  //   $('.computer-enemy').append(template);
-
-  //   let specialId = Life.prototype.meanOptions[numPick].id;
-
-  //   console.log(specialId);
-  // };
-
-  return specialId;
+  };
 
 };
 

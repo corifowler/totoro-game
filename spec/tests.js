@@ -88,21 +88,12 @@ var Life = function Life() {
     (0, _jquery2['default'])('.life-choices').append(template);
   };
 
-  // this.computer = function() {
+  this.computer = function (numPick) {
 
-  //   let numPick = _.random(0,5);
+    var template = '\n      <div class="ch">' + Life.prototype.meanOptions[numPick].opt + '</div>';
 
-  //   let template = `
-  //     <div class="ch">${ Life.prototype.meanOptions[numPick].opt}</div>`;
-
-  //   $('.computer-enemy').append(template);
-
-  //   let specialId = Life.prototype.meanOptions[numPick].id;
-
-  //   console.log(specialId);
-  // };
-
-  return specialId;
+    (0, _jquery2['default'])('.computer-enemy').append(template);
+  };
 };
 
 var rain = { id: 0, opt: 'It is raining', pow: 20 };

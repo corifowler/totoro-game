@@ -88,21 +88,12 @@ var Life = function Life() {
     (0, _jquery2['default'])('.life-choices').append(template);
   };
 
-  // this.computer = function() {
+  this.computer = function (numPick) {
 
-  //   let numPick = _.random(0,5);
+    var template = '\n      <div class="ch">' + Life.prototype.meanOptions[numPick].opt + '</div>';
 
-  //   let template = `
-  //     <div class="ch">${ Life.prototype.meanOptions[numPick].opt}</div>`;
-
-  //   $('.computer-enemy').append(template);
-
-  //   let specialId = Life.prototype.meanOptions[numPick].id;
-
-  //   console.log(specialId);
-  // };
-
-  return specialId;
+    (0, _jquery2['default'])('.computer-enemy').append(template);
+  };
 };
 
 var rain = { id: 0, opt: 'It is raining', pow: 20 };
@@ -169,6 +160,7 @@ var makeFriend = (0, _jquery2['default'])('.make-friend');
 makeFriend.on('click', function () {
 
   var bestFriend = new _friend2['default']();
+  var computer = new _life2['default']();
   totoro.health = 0;
   console.log('a new friend has been created');
 
@@ -181,6 +173,8 @@ makeFriend.on('click', function () {
   (0, _jquery2['default'])('.computer-enemy').fadeIn(3000);
 
   bestFriend.response();
+  specialId = _underscore2['default'].random(0, 5);
+  computer.computer(specialId);
 
   var friendPick = (0, _jquery2['default'])('.friend-choices');
 
@@ -196,7 +190,7 @@ makeFriend.on('click', function () {
 
     console.log(power);
 
-    if (buttonId === specialId) {
+    if (Number(buttonId) === Number(specialId)) {
       console.log('it matches');
       totoro.health = totoro.health + Number(power);
       totoroHealth.text(totoro.health);
@@ -204,6 +198,13 @@ makeFriend.on('click', function () {
       console.log('wrong choice');
       totoro.health = totoro.health - Number(power);
       totoroHealth.text(totoro.health);
+    }
+
+    if (totoro.health >= 100) {
+      console.log('you are a good friend');
+    } else {
+      specialId = _underscore2['default'].random(0, 5);
+      computer.computer(specialId);
     }
   });
 
@@ -257,8 +258,12 @@ makeEnemy.on('click', function () {
       totoro.health = totoro.health + Number(power);
     }
 
-    var totoroHealth = (0, _jquery2['default'])('.healthAmt');
-    totoroHealth.text(totoro.health);
+    if (totoro.health <= 0) {
+      console.log('you destroyed totoro');
+    } else {
+      var _totoroHealth = (0, _jquery2['default'])('.healthAmt');
+      _totoroHealth.text(totoro.health);
+    }
   });
 });
 
