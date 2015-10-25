@@ -36,7 +36,7 @@ var Friend = function Friend() {
 
     var template = '\n      <div class="ch">' + Friend.prototype.battleOptions[numPick].opt + '</div>';
 
-    (0, _jquery2['default'])('.computer-friend').append(template);
+    (0, _jquery2['default'])('.comp-answer').html(template);
   };
 };
 
@@ -92,7 +92,7 @@ var Life = function Life() {
 
     var template = '\n      <div class="ch">' + Life.prototype.meanOptions[numPick].opt + '</div>';
 
-    (0, _jquery2['default'])('.computer-enemy').append(template);
+    (0, _jquery2['default'])('.comp-answer-2').html(template);
   };
 };
 
@@ -164,6 +164,7 @@ makeFriend.on('click', function () {
 
   (0, _jquery2['default'])('.friend').fadeOut(1000);
   (0, _jquery2['default'])('.life').fadeOut(1000);
+  (0, _jquery2['default'])('.title').fadeOut(1000);
   (0, _jquery2['default'])('.f-instructions').fadeIn(3000);
 
   var playBtn = (0, _jquery2['default'])('.f-play');
@@ -208,6 +209,10 @@ makeFriend.on('click', function () {
 
     if (totoro.health >= 100) {
       console.log('you are a good friend');
+      (0, _jquery2['default'])('.friend-arena').fadeOut(1000);
+      (0, _jquery2['default'])('.computer-enemy').fadeOut(1000);
+      (0, _jquery2['default'])('.totoro').fadeOut(1000);
+      (0, _jquery2['default'])('.all-i-do-is-win').fadeIn(5000);
     } else {
       specialId = _underscore2['default'].random(0, 5);
       computer.computer(specialId);
@@ -233,6 +238,7 @@ makeEnemy.on('click', function () {
 
   (0, _jquery2['default'])('.life').fadeOut(1000);
   (0, _jquery2['default'])('.friend').fadeOut(1000);
+  (0, _jquery2['default'])('.title').fadeOut(1000);
   (0, _jquery2['default'])('.e-instructions').fadeIn(3000);
 
   // Create game arena
@@ -268,14 +274,18 @@ makeEnemy.on('click', function () {
 
     if (Number(btnId) === Number(specialId)) {
       console.log('it matches');
-      totoro.health = totoro.health - Number(power);
+      totoro.health = totoro.health + Number(power);
     } else {
       console.log('wrong choice');
-      totoro.health = totoro.health + Number(power);
+      totoro.health = totoro.health - Number(power);
     }
 
     if (totoro.health <= 0) {
       console.log('you destroyed totoro');
+      (0, _jquery2['default'])('.enemy-arena').fadeOut(1000);
+      (0, _jquery2['default'])('.computer-friend').fadeOut(1000);
+      (0, _jquery2['default'])('.totoro').fadeOut(1000);
+      (0, _jquery2['default'])('.all-i-do-is-win').fadeIn(5000);
     } else {
       var _totoroHealth = (0, _jquery2['default'])('.healthAmt');
       _totoroHealth.text(totoro.health);

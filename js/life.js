@@ -27,7 +27,7 @@ let Life = function() {
     let template = `
       <div class="ch">${ Life.prototype.meanOptions[numPick].opt}</div>`;
 
-    $('.computer-enemy').append(template);
+    $('.comp-answer-2').html(template);
 
   };
 

@@ -36,7 +36,7 @@ var Friend = function Friend() {
 
     var template = '\n      <div class="ch">' + Friend.prototype.battleOptions[numPick].opt + '</div>';
 
-    (0, _jquery2['default'])('.computer-friend').append(template);
+    (0, _jquery2['default'])('.comp-answer').html(template);
   };
 };
 
@@ -92,7 +92,7 @@ var Life = function Life() {
 
     var template = '\n      <div class="ch">' + Life.prototype.meanOptions[numPick].opt + '</div>';
 
-    (0, _jquery2['default'])('.computer-enemy').append(template);
+    (0, _jquery2['default'])('.comp-answer-2').html(template);
   };
 };
 

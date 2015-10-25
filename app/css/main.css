@@ -2033,7 +2033,8 @@ body {
 .container {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 5%; }
   .container::after {
     clear: both;
     content: "";
@@ -2128,7 +2129,7 @@ body {
 
 .f-instructions {
   max-width: 80%;
-  margin: 0 auto;
+  margin: 5% auto;
   display: none;
   border: 1px solid black;
   border-radius: 3px;
@@ -2144,7 +2145,7 @@ body {
 
 .e-instructions {
   max-width: 80%;
-  margin: 0 auto;
+  margin: 5% auto;
   display: none;
   border: 1px solid black;
   border-radius: 3px;
@@ -2193,7 +2194,10 @@ body {
     margin-left: 5px; }
   .friend-arena .friend-choices button {
     display: block;
-    margin: 10px; }
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: none; }
 
 .enemy-arena {
   float: left;
@@ -2207,7 +2211,10 @@ body {
     margin-right: 0; }
   .enemy-arena .life-choices button {
     display: block;
-    margin: 10px; }
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: none; }
 
 .computer-enemy {
   float: left;
@@ -2218,6 +2225,8 @@ body {
   display: none; }
   .computer-enemy:last-child {
     margin-right: 0; }
+  .computer-enemy span {
+    margin-left: 34%; }
 
 .computer-friend {
   float: left;
@@ -2227,6 +2236,8 @@ body {
   display: none; }
   .computer-friend:last-child {
     margin-right: 0; }
+  .computer-friend span {
+    margin-left: 34%; }
 
 .ch {
   border: 1px solid black;
@@ -2236,5 +2247,14 @@ body {
   font-size: 20px;
   max-width: 90%;
   margin: 10px auto; }
+
+.all-i-do-is-win {
+  max-width: 80%;
+  margin: 0 auto;
+  display: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

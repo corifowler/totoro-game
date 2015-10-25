@@ -9,6 +9,7 @@ body {
 
 .container{
 	@include outer-container;
+	margin-top: 5%;
 
 	h1 {
 		text-align: center;
@@ -116,7 +117,7 @@ body {
 
 	.f-instructions {
 		max-width: 80%;
-		margin: 0 auto;
+		margin: 5% auto;
 		display: none;
 		border: 1px solid black;
 		border-radius: 3px;
@@ -135,7 +136,7 @@ body {
 
 	.e-instructions {
 		max-width: 80%;
-		margin: 0 auto;
+		margin: 5% auto;
 		display: none;
 		border: 1px solid black;
 		border-radius: 3px;
@@ -184,6 +185,9 @@ body {
 	.friend-choices button {
 		display: block;
 		margin: 10px;
+		border: 1px solid black;
+		border-radius: 3px;
+		background: none;
 	}
 }
 
@@ -196,6 +200,9 @@ body {
 	.life-choices button {
 		display: block;
 		margin: 10px;
+		border: 1px solid black;
+		border-radius: 3px;
+		background: none;
 	}
 }
 
@@ -203,11 +210,19 @@ body {
 	@include span-columns(4);
 	@include omega();
 	display: none;
+
+	span {
+		margin-left: 34%;
+	}
 }
 
 .computer-friend {
 	@include span-columns(4);
 	display: none;
+
+	span {
+		margin-left: 34%;
+	}
 }
 
 .ch {
@@ -218,4 +233,14 @@ body {
 	font-size: 20px;
 	max-width: 90%;
 	margin: 10px auto;
+}
+
+.all-i-do-is-win {
+	max-width: 80%;
+	margin: 0 auto;
+	display: none;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5px;
+	text-align: center;
 }

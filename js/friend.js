@@ -28,7 +28,7 @@ let Friend = function() {
     let template = `
       <div class="ch">${ Friend.prototype.battleOptions[numPick].opt}</div>`;
 
-    $('.computer-friend').append(template);
+    $('.comp-answer').html(template);
   };
 
 };

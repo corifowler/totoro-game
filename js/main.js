@@ -32,6 +32,7 @@ makeFriend.on('click', function() {
 
   $('.friend').fadeOut(1000);
   $('.life').fadeOut(1000);
+  $('.title').fadeOut(1000);
   $('.f-instructions').fadeIn(3000);
 
   let playBtn = $('.f-play');
@@ -76,6 +77,10 @@ makeFriend.on('click', function() {
 
     if (totoro.health >= 100) {
       console.log('you are a good friend');
+      $('.friend-arena').fadeOut(1000);
+      $('.computer-enemy').fadeOut(1000);
+      $('.totoro').fadeOut(1000);
+      $('.all-i-do-is-win').fadeIn(5000);
     } else {
       specialId = _.random(0,5);
       computer.computer(specialId);
@@ -106,6 +111,7 @@ makeEnemy.on('click', function() {
 
   $('.life').fadeOut(1000);
   $('.friend').fadeOut(1000);
+  $('.title').fadeOut(1000);
   $('.e-instructions').fadeIn(3000);
 
   // Create game arena
@@ -141,14 +147,18 @@ makeEnemy.on('click', function() {
 
     if (Number(btnId) === Number(specialId)) {
       console.log('it matches');
-      totoro.health = totoro.health - Number(power);
+      totoro.health = totoro.health + Number(power);
     } else {
       console.log('wrong choice');
-      totoro.health = totoro.health + Number(power);
+      totoro.health = totoro.health - Number(power);
     }
 
     if (totoro.health <= 0) {
       console.log('you destroyed totoro');
+      $('.enemy-arena').fadeOut(1000);
+      $('.computer-friend').fadeOut(1000);
+      $('.totoro').fadeOut(1000);
+      $('.all-i-do-is-win').fadeIn(5000);
     } else {
       let totoroHealth = $('.healthAmt');
       totoroHealth.text(totoro.health);
