@@ -1,5 +1,7 @@
 # Totoro Friendship Game
 
+> View project here: http://futuristic-furniture.surge.sh/
+
 * There are no losers, you either kill Totoro, or win him over with friendship.
 
 * Tests were created to make sure characters could be created
